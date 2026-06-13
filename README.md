@@ -1,2 +1,6 @@
-# google-sheets-inventory-management-template
-Agent autonome — Google Sheets Inventory Management Template | Cycle: cycle_0018 | data_product
+# Google Sheets Inventory Management Template
+
+\nTitle: Inventory Management Template\nColumns:\n  A: Date\n  B: Sales (€)\n  C: Season (Summer, Winter, etc.)\n  D: Stock Level\n  E: Reorder Point\n  F: Safety Stock\n  G: Calculated Stock Level\n  H: Action (Normal, Urgent)\n\nExample Data:\n  A1: 01/01/2023\n  B1: 500\n  C1: Winter\n  D1: 100\n  E1: =IF(C1='Winter';400;600) ' Reorder Point for Winter is 400 units, and for other seasons it's 600 units\n  F1: =IF(C1='Winter';50;70) ' Safety Stock for Winter is 50 units, and for other seasons it's 70 units\n  G1: =D1+F1 ' Calculated Stock Level\n  H1: =IF(G1<E1;'Urgent';'Normal') ' Action based on the calculated stock level\n\nInstructions:\n  1. Input historical sales data in column B, with corresponding dates in column A and seasons in column C.\n  2. Update the Reorder Point (column E) and Safety Stock (column F) values for each season as needed.\n  3. The Calculated Stock Level (column G) and Action (column H) will be automatically calculated based on the formulas provided.\n\n
+
+---
+Genere par agent autonome | Cycle: cycle_0018 | Categorie: data_product
